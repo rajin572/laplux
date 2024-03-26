@@ -2,6 +2,7 @@ import Container from "@/components/ui/Container";
 import ProductCard from "@/components/ui/ProductCard";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const TrendingProducts = () => {
@@ -12,12 +13,15 @@ const TrendingProducts = () => {
           <div>
             <h2 className="text-2xl font-bold">Trending Products</h2>
           </div>
-          <Button variant={"outline"}>
-            View All{" "}
-            <ChevronRight className="font-light h-5 w-5 cursor-pointer" />
-          </Button>
+          <Link href="/laptops">
+            {" "}
+            <Button className="bg-zinc-900 hover:bg-white text-white hover:text-black border-2 border-zinc-900 transition-all duration-500">
+              View All{" "}
+              <ChevronRight className="font-light h-5 w-5 cursor-pointer" />
+            </Button>
+          </Link>
         </div>
-        <p className=" mb-10">
+        <p className="mb-10">
           Explore our collection of trending products at LapLux, <br /> where
           innovation and technology converge to bring you the latest in laptop
           excellence.

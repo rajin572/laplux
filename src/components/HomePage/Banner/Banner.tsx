@@ -21,13 +21,13 @@ const Banner = () => {
         <Container>
           <div className=" mx-auto  flex justify-center items-center text-center flex-col">
             <h2 className="text-2xl md:text-3xl lg:text-4xl text-white font-bold mb-6">
-              Shop Now for Cutting-Edge Technology and Elevate Your Computing
-              Experience!
-            </h2>
-            <p className="md:text-xl text-white mb-10">
               Welcome to LapLux
               <br />
               Where Innovation Meets Excellence in Laptops!
+            </h2>
+            <p className="md:text-xl text-white mb-10">
+              Shop Now for Cutting-Edge Technology and Elevate Your Computing
+              Experience!
             </p>
           </div>
           <div>
