@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-white text-black py-5 border-t-2 mt-20">
+    <div className="bg-zinc-900 text-white py-5 border-t-2 mt-20">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 lg:justify-items-center items-start">
           <div className="mb-5 lg:mb-0">
@@ -46,10 +46,10 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <div className="flex justify-start items-center gap-5 my-5">
-                  <Facebook className="text-black cursor-pointer" />
-                  <Linkedin className="text-black cursor-pointer" />
-                  <Instagram className="text-black cursor-pointer" />
-                  <Twitter className="text-black cursor-pointer" />
+                  <Facebook className="text-white cursor-pointer" />
+                  <Linkedin className="text-white cursor-pointer" />
+                  <Instagram className="text-white cursor-pointer" />
+                  <Twitter className="text-white cursor-pointer" />
                 </div>
               </li>
             </ul>

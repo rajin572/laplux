@@ -10,7 +10,7 @@ type TSlider = {
 
 const Sidebar = ({ slider, setSlider }: TSlider) => {
   return (
-    <div className=" bg-black text-white h-screen pt-5">
+    <div className=" bg-zinc-900 text-white h-screen pt-5">
       {/* //* SideBar Collaps Buttons */}
       <div className="lg:hidden">
         {slider ? (

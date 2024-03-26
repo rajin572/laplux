@@ -24,7 +24,7 @@ const DashBoardLayoutCompo = ({ children }: { children: React.ReactNode }) => {
       <div
         className={`${slider ? "col-span-12" : "col-span-11"}  lg:col-span-10`}
       >
-        <div className="bg-black text-white flex justify-center items-end flex-col px-5 lg:px-10 py-2">
+        <div className="bg-zinc-900 text-white flex justify-center items-end flex-col px-5 lg:px-10 py-2">
           <div className="flex justify-center items-center">
             <div className="text-end me-2">
               <h2 className="text font-bold">Zahid Hossain</h2>
