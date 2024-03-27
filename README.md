@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Laplux Website
 
-## Getting Started
+## Live Link:
 
-First, run the development server:
+Website Live Link: [Laplux](https://laplux.vercel.app/).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the website using `npm run dev`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Description:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Laplux is a comprehensive online platform dedicated to providing users with a seamless experience in exploring, comparing, and purchasing laptops. With an extensive database of the latest laptop models from top brands such as Apple, Dell, HP, Acer, Samsung, ASUS, and more, Laplux offers users a one-stop destination for all their laptop needs.
 
-## Learn More
+At Laplux, users can browse through a diverse range of laptops, including gaming laptops, ultrabooks, 2-in-1 convertibles, business laptops, and more, catering to various preferences and requirements. Each laptop listing on Laplux provides detailed specifications, including processor type, RAM, storage capacity, display size and resolution, graphics card, operating system, and more, empowering users to make informed purchasing decisions.
 
-To learn more about Next.js, take a look at the following resources:
+Furthermore, Laplux provides users with valuable insights and resources, including expert reviews, user ratings, and customer feedback, helping users gain a better understanding of each laptop's performance, durability, and user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+With its user-friendly interface, intuitive navigation, and comprehensive database of laptops, Laplux strives to be the go-to destination for individuals seeking to purchase a new laptop, whether for work, gaming, entertainment, or productivity, ensuring a hassle-free and satisfying shopping experience from start to finish.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Features :
 
-## Deploy on Vercel
+1. A user-friendly website facilitating donations where we ensuring a hassle-free and satisfying shopping experience from start to finish.
+2. With an extensive database of the latest laptop models from top brands such as Apple, Dell, HP, Acer, Samsung, ASUS, and more.
+3. Laplux provides users with valuable insights and resources, including expert reviews, user ratings, and customer feedback, helping users gain a better understanding of each laptop's performance, durability, and user experience.
+4. An interactive UI design that invites users to explore and engage with the website effortlessly, facilitating seamless navigation and interaction
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tecnology I have Used:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1.TypeScript 2. Next JS 4. Tailwind CSS 5. ShadCn

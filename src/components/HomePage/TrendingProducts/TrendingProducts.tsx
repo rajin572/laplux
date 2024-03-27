@@ -7,11 +7,12 @@ import Link from "next/link";
 import React from "react";
 
 const TrendingProducts = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/laptop", {
+  const res = await fetch("https://laplux-server.vercel.app/api/v1/laptop", {
     next: {
       revalidate: 30,
     },
   });
+
   const laptopData = await res.json();
 
   const sortedLaptopData = laptopData?.data
@@ -19,6 +20,7 @@ const TrendingProducts = async () => {
     .sort(
       (b: { rating: number }, a: { rating: number }) => a.rating - b.rating
     );
+
   return (
     <div className="w-full mt-20">
       <Container>

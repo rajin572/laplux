@@ -14,14 +14,14 @@ const AllLaptopPage = async ({
   if (searchParams.brand) {
     brand = searchParams.brand;
     const res = await fetch(
-      `http://localhost:5000/api/v1/laptop/brand/${brand}`,
+      `https://laplux-server.vercel.app/api/v1/laptop/brand/${brand}`,
       {
         cache: "no-store",
       }
     );
     data = await res.json();
   } else {
-    const res = await fetch("http://localhost:5000/api/v1/laptop", {
+    const res = await fetch("https://laplux-server.vercel.app/api/v1/laptop", {
       cache: "no-store",
     });
     data = await res.json();

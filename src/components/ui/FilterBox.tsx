@@ -44,6 +44,24 @@ const FilterBox = () => {
             1,25,000 - 1,50,000
           </label>
         </div>
+        <div className="flex items-center space-x-2 mb-2">
+          <Checkbox id="terms" />
+          <label
+            htmlFor="terms"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            1,50,000 - 2,00,000
+          </label>
+        </div>
+        <div className="flex items-center space-x-2 mb-2">
+          <Checkbox id="terms" />
+          <label
+            htmlFor="terms"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            2,00,000 - 9,99,999
+          </label>
+        </div>
       </div>
       {/* Category */}
       <div className="border-2 p-5 mb-10">

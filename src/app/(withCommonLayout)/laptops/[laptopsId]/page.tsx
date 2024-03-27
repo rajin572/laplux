@@ -12,7 +12,7 @@ interface ILaptopId {
 }
 
 export const generateStaticParams = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/laptop");
+  const res = await fetch("https://laplux-server.vercel.app/api/v1/laptop");
   const laptops = await res.json();
   return laptops?.data?.slice(0, 10).map((laptop: TLaptop) => ({
     laptopsId: laptop?._id,
@@ -21,7 +21,7 @@ export const generateStaticParams = async () => {
 
 const LaptopDetailPage = async ({ params }: ILaptopId) => {
   const res = await fetch(
-    `http://localhost:5000/api/v1/laptop/${params.laptopsId}`,
+    `https://laplux-server.vercel.app/api/v1/laptop/${params.laptopsId}`,
     {
       cache: "no-store",
     }
