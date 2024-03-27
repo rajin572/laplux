@@ -5,10 +5,12 @@ import { TLaptop } from "@/types";
 import React from "react";
 
 const FlashSalePage = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/laptop", {
+  const res = await fetch("https://laplux-server.vercel.app/api/v1/laptop", {
     cache: "no-store",
   });
+
   const laptopData = await res.json();
+
   const flashSaleLaptops = laptopData.data.filter(
     (laptop: TLaptop) => laptop.flashSale
   );

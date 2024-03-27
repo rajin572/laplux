@@ -10,7 +10,7 @@ import {
 import { TLaptop } from "@/types";
 
 const DashboardAllProduct = async () => {
-  const res = await fetch(`http://localhost:5000/api/v1/laptop`, {
+  const res = await fetch(`https://laplux-server.vercel.app/api/v1/laptop`, {
     cache: "no-store",
   });
 
