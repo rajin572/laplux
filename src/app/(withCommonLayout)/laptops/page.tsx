@@ -1,19 +1,33 @@
 import Container from "@/components/ui/Container";
 import FilterBox from "@/components/ui/FilterBox";
 import ProductCard from "@/components/ui/ProductCard";
+import { TLaptop } from "@/types";
 
-const AllLaptopPage = ({
+const AllLaptopPage = async ({
   searchParams,
 }: {
   searchParams: { brand: string };
 }) => {
   let brand = "";
-  console.log(searchParams);
+  let data = [];
+
   if (searchParams.brand) {
     brand = searchParams.brand;
+    const res = await fetch(
+      `http://localhost:5000/api/v1/laptop/brand/${brand}`,
+      {
+        cache: "no-store",
+      }
+    );
+    data = await res.json();
   } else {
+    const res = await fetch("http://localhost:5000/api/v1/laptop", {
+      cache: "no-store",
+    });
+    data = await res.json();
     brand = "All";
   }
+
   return (
     <div className="mt-32">
       <Container>
@@ -26,25 +40,21 @@ const AllLaptopPage = ({
           preference.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-12 items-start gap-5">
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <FilterBox />
           </div>
-          <div className="col-span-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center items-start">
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-            </div>
+          <div className="lg:col-span-10">
+            {data?.data?.length === 0 ? (
+              <h1 className="text-2xl font-bold text-center">
+                No Laptop Found For {brand}
+              </h1>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center items-start">
+                {data?.data?.map((laptop: TLaptop) => (
+                  <ProductCard key={laptop?._id} laptop={laptop} />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </Container>

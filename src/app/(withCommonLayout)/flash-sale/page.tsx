@@ -1,9 +1,18 @@
 import Container from "@/components/ui/Container";
 import CountdownTimer from "@/components/ui/CountDownTimer";
 import ProductCard from "@/components/ui/ProductCard";
+import { TLaptop } from "@/types";
 import React from "react";
 
-const FlashSalePage = () => {
+const FlashSalePage = async () => {
+  const res = await fetch("http://localhost:5000/api/v1/laptop", {
+    cache: "no-store",
+  });
+  const laptopData = await res.json();
+  const flashSaleLaptops = laptopData.data.filter(
+    (laptop: TLaptop) => laptop.flashSale
+  );
+
   return (
     <div className="mt-16 py-10">
       <Container>
@@ -17,19 +26,9 @@ const FlashSalePage = () => {
           unbeatable deals on the latest laptops that will leave you in awe.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 justify-items-center items-start">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {flashSaleLaptops.map((laptop: TLaptop) => (
+            <ProductCard key={laptop?._id} laptop={laptop} />
+          ))}
         </div>
       </Container>
     </div>

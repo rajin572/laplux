@@ -10,20 +10,23 @@ const Footer = () => {
           <div className="mb-5 lg:mb-0">
             <h1 className="text-xl font-bold mb-3">Trending Products</h1>
             <ul>
-              <li className="mb-2">Trending Products</li>
-              <li className="mb-2">Trending Products</li>
-              <li className="mb-2">Trending Products</li>
-              <li className="mb-2">Trending Products</li>
-              <li className="mb-2">Trending Products</li>
+              <li className="mb-2">MacBook Air 13</li>
+              <li className="mb-2">HP 15s-fq5317TU</li>
+              <li className="mb-2">Dell Latitude 9430</li>
+              <li className="mb-2">Acer Nitro V15 ANV15</li>
+              <li className="mb-2">Samsung Book Odyssey</li>
+              <li className="mb-2">Asus ROG Zephyrus G16</li>
             </ul>
           </div>
           <div className="mb-5 lg:mb-0">
             <h1 className="text-xl font-bold mb-3">Brands</h1>
             <ul>
               <li className="mb-2">Apple</li>
-              <li className="mb-2">ASUS</li>
-              <li className="mb-2">HP</li>
               <li className="mb-2">DELL</li>
+              <li className="mb-2">HP</li>
+              <li className="mb-2">ASUS</li>
+              <li className="mb-2">Samsung</li>
+              <li className="mb-2">Acer</li>
             </ul>
           </div>
           <div className="mb-5 lg:mb-0">

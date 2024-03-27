@@ -1,12 +1,13 @@
+import { TLaptop } from "@/types";
 import { CirclePlus } from "lucide-react";
 import Image from "next/image";
 
-const SliderProductCard = () => {
+const SliderProductCard = ({ laptop }: { laptop: TLaptop }) => {
   return (
-    <div className="border-2 rounded-md w-[280px] bg-white overflow-hidden">
+    <div className="border-2 rounded-md w-[280px] bg-white overflow-hidden mx-auto">
       <div className="bg-[#ffffff] p-5 w-[280px] h-[210px] border-b-2 rounded-t-md flex justify-center items-center group overflow-hidden">
         <Image
-          src="https://i.ibb.co/d0d8ynX/Laptop5.png"
+          src={laptop?.image}
           alt="product-image"
           width={0}
           height={0}

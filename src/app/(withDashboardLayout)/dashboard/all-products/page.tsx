@@ -7,27 +7,47 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { TLaptop } from "@/types";
 
-const DashboardAllProduct = () => {
+const DashboardAllProduct = async () => {
+  const res = await fetch(`http://localhost:5000/api/v1/laptop`, {
+    cache: "no-store",
+  });
+
+  const laptops = await res.json();
+
+  const discountedPriceGenerator = (price: number, discount: number) => {
+    const discountedPrice = price - price * (discount / 100);
+    return discountedPrice;
+  };
+
   return (
     <div>
       <Table>
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+            <TableHead className="w-[100px]">No.</TableHead>
+            <TableHead>Name</TableHead>
+            <TableHead>Brand</TableHead>
+            <TableHead>Amount</TableHead>
+            <TableHead>Discount</TableHead>
+            <TableHead>Discounted Amount</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          <TableRow>
-            <TableCell className="font-medium">INV001</TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
-            <TableCell className="text-right">$250.00</TableCell>
-          </TableRow>
+          {laptops?.data?.map((laptop: TLaptop, i: number) => (
+            <TableRow key={laptop?._id}>
+              <TableCell className="font-medium">{i + 1}</TableCell>
+              <TableCell>{laptop?.name}</TableCell>
+              <TableCell>{laptop?.brand}</TableCell>
+              <TableCell>{laptop?.price}</TableCell>
+              <TableCell>{laptop?.discount}</TableCell>
+              <TableCell>
+                {discountedPriceGenerator(laptop?.price, laptop?.discount)}
+              </TableCell>
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
     </div>

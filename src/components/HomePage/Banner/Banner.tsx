@@ -1,11 +1,6 @@
 import banner from "@/assets/images/banner.jpg";
 import Container from "@/components/ui/Container";
-import SliderProductCard from "@/components/ui/SliderProductCard";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import ImageSlider from "@/components/ui/ImageSlider";
 
 const Banner = () => {
   return (
@@ -31,36 +26,7 @@ const Banner = () => {
             </p>
           </div>
           <div>
-            <Carousel
-              opts={{
-                align: "center",
-                loop: true,
-              }}
-            >
-              <CarouselContent className="-ml-4">
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <SliderProductCard />
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <SliderProductCard />
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <SliderProductCard />
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <SliderProductCard />
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <SliderProductCard />
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <SliderProductCard />
-                </CarouselItem>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                  <SliderProductCard />
-                </CarouselItem>
-              </CarouselContent>
-            </Carousel>
+            <ImageSlider />
           </div>
         </Container>
       </div>

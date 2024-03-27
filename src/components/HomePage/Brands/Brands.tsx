@@ -1,14 +1,13 @@
 import assets from "@/assets";
 import BrandCard from "@/components/ui/BrandCard";
 import Container from "@/components/ui/Container";
-import Image from "next/image";
 
 const Brands = () => {
   return (
     <div className="mt-20">
       <Container>
         <div className="mb-16">
-          <h1 className="text-2xl text-center font-bold">Top Categories</h1>
+          <h1 className="text-2xl text-center font-bold">Top Brands</h1>
           <p className="text-slate-600 md:w-1/2 mx-auto mt-5  text-center">
             Discover the pinnacle of laptop excellence with LapLux top
             categories, where cutting-edge technology meets unparalleled
@@ -17,7 +16,7 @@ const Brands = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 justify-items-center items-center gap-5">
           <BrandCard image={assets.images.apple} title="Apple" />
-          <BrandCard image={assets.images.dell} title="DELL" />
+          <BrandCard image={assets.images.dell} title="Dell" />
           <BrandCard image={assets.images.hp} title="HP" />
           <BrandCard image={assets.images.asus} title="ASUS" />
           <BrandCard image={assets.images.samsung} title="Samsung" />
